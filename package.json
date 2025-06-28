@@ -1,0 +1,30 @@
+{
+  "name": "mobile-app-monorepo",
+  "version": "1.0.0",
+  "description": "모바일 앱 서비스 Monorepo",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && ./gradlew build",
+    "install:frontend": "cd frontend && npm install",
+    "dev:backend": "cd backend && ./gradlew bootRun",
+    "dev:frontend": "cd frontend && npm start",
+    "build:all": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && ./gradlew build",
+    "build:frontend": "cd frontend && npm run build",
+    "test:all": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && ./gradlew test",
+    "test:frontend": "cd frontend && npm test",
+    "clean:all": "npm run clean:backend && npm run clean:frontend",
+    "clean:backend": "cd backend && ./gradlew clean",
+    "clean:frontend": "cd frontend && npm run clean"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+} 
